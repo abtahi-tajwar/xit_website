@@ -1,0 +1,118 @@
+:root {
+  --base-color: #3ec1d5;
+}
+
+.single__container {
+  margin: 0 auto;
+  margin-top: 70px;
+  width: 80%;
+}
+
+.single__container .intro {
+  margin-top: 100px;
+}
+
+.single__container .intro h2 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.single__container .intro__body {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  gap: 50px;
+}
+
+.single__container .intro__project-slideshow {
+  width: 40%;
+}
+
+.single__container .intro__project-slideshow .owl-carousel {
+  width: 100%;
+}
+
+.single__container .intro__project-desc {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 1.4rem;
+}
+
+.single__container .intro__project-desc i {
+  color: var(--base-color);
+  padding-right: 10px;
+}
+
+.single__container .tutorial {
+  margin-top: 30px;
+}
+
+.single__container .tutorial h2 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.single__container .faq {
+  margin-top: 30px;
+}
+
+.single__container .faq h2 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.single__container .faq__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.single__container .faq .questions {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.single__container .faq .questions .question {
+  border: 2px solid var(--base-color);
+  border-radius: 5px;
+  margin: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 60px;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+}
+
+.single__container .faq .questions .question:hover {
+  background-color: var(--base-color);
+}
+
+.single__container .faq .questions .question:hover h3 {
+  color: white;
+}
+
+.single__container .faq .questions .question:hover img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.single__container .faq .questions .question img {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.single__container .faq .answer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+/*# sourceMappingURL=single-project.css.map */

@@ -1,0 +1,35 @@
+{
+    "name": "XiT Bangladesh",
+    "services": [
+        ["Build Attractive WEB Designs", "WEB made business easy"],
+        ["Best Business Software", "You deserve the best quality of Business Service"],
+        ["Build Customised Mobile App", "Build your Idea into an APP"],
+        ["Best Digital Business Strategy", "Helping Business Security"]
+    ],
+    "about": "<b>Xit Bangladesh</b> is a professional web design and development services company delivering <b>full web service solutions with the android application</b>. We offer our expertise in Web Design and Development, Search Engine Optimization, Social Media Marketing, E-Commerce and Virtual Assistant services. Leave your query to us, we will take care of the rest",
+    "about_services": [
+        "We design websites that link up your business to people.",
+        "Our Web and android application services are integrated with latest technologies that fit to your business needs.",
+        "We aim to be an essential contributor to the growth of our clients operations delivering strategic and effective solutions for a prosperouses.",
+        "Make your brand standing out in the market."
+    ],
+    "service_measure": {
+        "web_development": "95",
+        "android_application": "20",
+        "web_design": "20"
+    },
+    "contact": {
+        "phone": [
+            "+880 1845-318609",
+            "+8801832269600",
+            "+8801679636311"
+        ],
+        "time": "Saturday-Thursday (9am-6pm)",
+        "email": "xitbangladesh@gmail.com",
+        "web": "www.xitbangladesh.com",
+        "location": "206, Madina market(2nd Floor), Lalchand Road, Chakbazar Chattogram",
+        "social_media": {
+            "facebook": "https://www.facebook.com/xitbd/"
+        }
+    }
+}
