@@ -35,7 +35,8 @@ CREATE TABLE project_faq (
 CREATE TABLE project_description(
     id INT(10) AUTO_INCREMENT PRIMARY KEY,
     project_id VARCHAR(255) NOT NULL,
-    description TEXT
+    description TEXT,
+    project_description TEXT
 )
 CREATE TABLE project_video(
     id INT(10) AUTO_INCREMENT PRIMARY KEY,

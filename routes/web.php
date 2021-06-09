@@ -16,4 +16,7 @@ use App\Http\Controllers\SingleProject;
 */
 
 Route::get('/', [Homepage::class, 'initHomePage']);
-Route::get('/single-project', [SingleProject::class, 'initSinglePage']);
+Route::get('/single-project/{id}', [SingleProject::class, 'initSinglePage']);
+Route::view('/admin/dashboard', 'admin.dashboard')->name('admin-dashboard');
+Route::view('/admin/projects/create', 'admin.createproject')->name('admin-create-project');
+Route::post('/admin/projects/create', [SingleProject::class, 'addProject'])->name('admin-create-project');

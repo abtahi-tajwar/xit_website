@@ -519,7 +519,7 @@
                 <a href="#"><img src="{{asset('images')}}/portfolios/{{ $project['image'] }}" alt="" /></a>
                 <div class="add-actions text-center">
                   <div class="project-dec">
-                    <a class="" href="eexam.html">
+                    <a class="" href="single-project/{{$project['id']}}">
                       <h4>{{ $project['title'] }}</h4>
                       <span>{{ $project['category'] }}</span>
                     </a>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Member;
 use App\Project;
 use App\FAQ;
+
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 
@@ -24,8 +26,31 @@ class Data extends Controller
     {
         return Project::all();
     }
-    static function fetchFaq()
+    static function fetchFaq($project_id)
     {
-        return FAQ::all();
+        return FAQ::where('project_id', $project_id)
+                    ->get();
+    }
+    static function fetchProjectDesc($project_id)
+    {
+        $desc = DB::table('project_description')
+                    ->where('project_id', $project_id)
+                    ->get();
+        return $desc;
+    }
+    static function fetchProjectImage($project_id)
+    {
+        $img = DB::table('project_image')
+                    ->where('project_id', $project_id)
+                    ->get();
+        return $img;
+    }
+    static function fetchProjectSlideshow($project_id)
+    {
+        $images = DB::table('project_slideshow')
+                    ->where('project_id', $project_id)
+                    ->get();
+        return $images;
     }
 }
+

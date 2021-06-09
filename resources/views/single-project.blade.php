@@ -19,26 +19,27 @@
             <div class="intro__project-slideshow">
                 {{-- <img class="owl_img" src="{{ asset('images/portfolios/1.png') }}" alt=""> --}}
                 <div class="owl-carousel owl-theme">
-                    <div class="item"><img class="owl_img" src="{{ asset('images/portfolios/1.png') }}" alt=""></div>
-                    <div class="item"><img class="owl_img" src="{{ asset('images/portfolios/2.png') }}" alt=""></div>
-                    <div class="item"><img class="owl_img" src="{{ asset('images/portfolios/3.png') }}" alt=""></div>
-                    <div class="item"><img class="owl_img" src="{{ asset('images/portfolios/4.png') }}" alt=""></div>
+                    @foreach ($images as $image)
+                    <div class="item"><img class="owl_img" src="{{ asset('images/portfolios/'.$image['images']) }}" alt=""></div>
+                    @endforeach
                 </div>
             </div>
             <div class="intro__project-desc">
-                <b>FCM</b> consists of feature, which will make your gaming easy and reachable. Simply sign up, create your team, select your captain, vice-captain and join the contests.
+                <?php print_r($description[0]['description']) ?>
                 <ul>
-                    <li><i class="fa fa-check"></i> We design websites that link up your business to people.</li>
-                    <li><i class="fa fa-check"></i> Our Web and android application services are integrated with latest technologies that fit to your business needs.</li>
-                    <li><i class="fa fa-check"></i> We aim to be an essential contributor to the growth of our clients operations delivering strategic and effective solutions for a prosperouses.</li>
-                    <li><i class="fa fa-check"></i> Make your brand standing out in the market.</li>
+                    <?php 
+                        $feature_list = explode(";;;", $description[0]['feature_list']);    
+                    ?>
+                    @foreach ($feature_list as $feature)
+                    <li><i class="fa fa-check"></i> {{ $feature }}</li>
+                    @endforeach
                 </ul>
             </div>
         </div>
     </div>
     <div class="tutorial">
         <h2>How to use</h2>
-        <img src="{{ asset('images/portfolios/tutorial.jpg') }}" alt="">
+        <img src="{{ asset('images/portfolios/'.$img[0]['image']) }}" alt="">
     </div>
     <div class="faq">
         <h2>FAQ</h2>
