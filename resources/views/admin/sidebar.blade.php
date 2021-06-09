@@ -7,7 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link href="img/favicon.png" rel="icon">
+    <link href="{{ asset('img/favicon-admin.png') }}" rel="icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="{{ asset('/vendor/iconly/bold.css') }}">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{ asset('/vendor/bootstrap-icons/bootstrap-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin/sidebar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin/layout.css') }}">
-    <title>Document</title>
+    <title>XIT Website | Admin Panel</title>
 </head>
 <body>
     <?php
@@ -104,7 +104,7 @@
                             </a>
                             <ul class="submenu {{$projects}}">
                                 <li class="submenu-item {{ $projects_submenu['all-projects'] }}">
-                                    <a href="component-alert.html">All Projects</a>
+                                    <a href="{{ route('admin-all-projects') }}">All Projects</a>
                                 </li>
                                 <li class="submenu-item {{ $projects_submenu['create-projects'] }}">
                                     <a href="{{ route('admin-create-project') }}">Create Projects</a>

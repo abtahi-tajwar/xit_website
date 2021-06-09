@@ -1,4 +1,8 @@
 .page-content {
   width: 100%;
 }
+
+.input-group-text {
+  cursor: pointer;
+}
 /*# sourceMappingURL=layout.css.map */

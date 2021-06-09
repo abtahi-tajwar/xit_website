@@ -20,3 +20,4 @@ Route::get('/single-project/{id}', [SingleProject::class, 'initSinglePage']);
 Route::view('/admin/dashboard', 'admin.dashboard')->name('admin-dashboard');
 Route::view('/admin/projects/create', 'admin.createproject')->name('admin-create-project');
 Route::post('/admin/projects/create', [SingleProject::class, 'addProject'])->name('admin-create-project');
+Route::view('/admin/projects/all', 'admin.allprojects')->name('admin-all-projects');

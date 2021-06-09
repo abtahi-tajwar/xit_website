@@ -16,7 +16,9 @@
     <script src="{{asset('/vendor/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ asset('/vendor/apexcharts/apexcharts.js') }}"></script>
     <script src="{{asset('/vendor/sortable-js/jquery.sortable.js') }}"></script>
+    <script src="{{ asset('/vendor/simple-datatables/simple-datatables.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
     <script src="{{ asset('js/admin/sidebar.js') }}"></script>
-    <script src="{{ asset('js/admin/create-project.js') }}"></script>
+    <script src="{{ asset('js/admin/create-project.js') }}"></script>    
 </body>
 </html>
