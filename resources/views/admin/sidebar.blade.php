@@ -18,7 +18,8 @@
     <title>XIT Website | Admin Panel</title>
 </head>
 <body>
-    <?php
+    @inject('provider', 'App\Http\Controllers\Sidebar')
+    {{-- <?php
         $url_prefix = "http://localhost/xit_website/";
         $dashboard = $projects = $members = $website_info = ""; 
         $projects_submenu = array(
@@ -72,7 +73,7 @@
         }
         
           
-    ?>
+    ?> --}}
     <div id="app">
         <div id="sidebar" class="active">
             <div class="sidebar-wrapper active">

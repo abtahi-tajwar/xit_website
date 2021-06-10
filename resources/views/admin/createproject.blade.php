@@ -1,4 +1,6 @@
-@include('admin.sidebar')
+{{-- @include('admin.sidebar') --}}
+<?php use App\Http\Controllers\Sidebar;
+echo Sidebar::init(); ?>
 <div id="main">
     <header class="mb-3">
         <a href="#" class="burger-btn d-block d-xl-none">
@@ -54,7 +56,7 @@
                     </div>
                     <div class="mb-3 mt-2">
                         <label for="formFile" class="form-label">Choose project image</label>
-                        <input class="form-control" type="file" id="formFile">
+                        <input class="form-control" type="file" id="formFile" name="featured_image">
                       </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
@@ -64,4 +66,6 @@
             </div>
         </div>
 </div>
-@include('admin.footer')
+{{-- @include('admin.footer') --}}
+<?php use App\Http\Controllers\AdminFooter;
+echo AdminFooter::init(); ?>

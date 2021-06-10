@@ -7,6 +7,7 @@ use App\Http\Controllers\Data;
 
 use App\Project;
 use App\ProjectDescription;
+use DateTime;
 
 class SingleProject extends Controller
 {
@@ -30,6 +31,9 @@ class SingleProject extends Controller
     function addProject(Request $req) {
 
         $project_features = $req->input('project-feature');
+        $date = new DateTime();
+        $featured_image_name = $date->getTimestamp().'-'.$req->file('featured_image')->getClientOriginalName();
+        $req->file('featured_image')->move(public_path('../images/portfolios'), $featured_image_name);
         
         $project_features_string = "";
         $project_features_string = implode(",", $project_features);
@@ -39,7 +43,7 @@ class SingleProject extends Controller
         $project->category = $req->input('project-category');
         $project->date = $req->input('project-date');
         $project->description = $req->input('project-description');
-        $project->image = 'noproject.png';
+        $project->image = $featured_image_name;
         $project->feature_list = $project_features_string;
         $project->save();
 

@@ -1,4 +1,7 @@
-@include('admin.sidebar')
+{{-- @include('admin.sidebar') --}}
+<?php use App\Http\Controllers\Sidebar;
+echo Sidebar::init(); ?>
+
 <div id="main">
     <header class="mb-3">
         <a href="#" class="burger-btn d-block d-xl-none">
@@ -12,4 +15,6 @@
     <div class="page-content">
         
 </div>
-@include('admin.footer')
+{{-- @include('admin.footer') --}}
+<?php use App\Http\Controllers\AdminFooter;
+echo AdminFooter::init(); ?>
