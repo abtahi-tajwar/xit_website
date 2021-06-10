@@ -15,6 +15,7 @@ class Sidebar extends Controller
     public static $projects_submenu = array(
         'all-projects' => "",
         'create-projects' => "",
+        'edit-project' => "",
         'featured-images' => "",
         'slideshows' => "",
         'videos' => "",
@@ -37,6 +38,9 @@ class Sidebar extends Controller
             if(strpos(url()->current(), '/create')) {
                 Sidebar::$projects_submenu['create-projects'] = 'active';
             }  
+            if(strpos(url()->current(), '/edit')) {
+                Sidebar::$projects_submenu['edit-project'] = 'active';
+            }
             if(strpos(url()->current(), '/images')) {
                 Sidebar::$projects_submenu['featured-images'] = 'active';
             }

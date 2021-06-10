@@ -1,11 +1,10 @@
         <footer>
             <div class="footer clearfix mb-0 text-muted">
                 <div class="float-start">
-                    <p>2021 &copy; Mazer</p>
+                    {{-- <p>2021 &copy; Mazer</p> --}}
                 </div>
                 <div class="float-end">
-                    <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
-                            href="http://ahmadsaugi.com">A. Saugi</a></p>
+                    {{-- <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <ahref="http://ahmadsaugi.com">A. Saugi</a></p> --}}
                 </div>
             </div>
         </footer>
@@ -17,15 +16,14 @@
     <script src="{{asset('/vendor/sortable-js/jquery.sortable.js') }}"></script>
     <script src="{{ asset('/vendor/simple-datatables/simple-datatables.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
+    <script src="{{ asset('js/admin/sidebar.js') }}"></script>
     
     
     
-    @if($projects_submenu['create-projects'] === 'active')
+    @if($projects_submenu['create-projects'] === 'active' || $projects_submenu['edit-project'] === 'active')
     <script src="{{ asset('js/admin/create-project.js') }}"></script>
     @elseif($projects_submenu['all-projects'] === 'active')
-    <script src="{{ asset('js/admin/all-projects.js') }}"></script>
-    @elseif($dashboard === 'active')
-    <script src="{{ asset('js/admin/sidebar.js') }}"></script>
+    <script src="{{ asset('js/admin/all-projects.js') }}"></script>    
     @endif
 
 </body>

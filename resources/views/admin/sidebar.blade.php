@@ -19,61 +19,6 @@
 </head>
 <body>
     @inject('provider', 'App\Http\Controllers\Sidebar')
-    {{-- <?php
-        $url_prefix = "http://localhost/xit_website/";
-        $dashboard = $projects = $members = $website_info = ""; 
-        $projects_submenu = array(
-            'all-projects' => "",
-            'create-projects' => "",
-            'featured-images' => "",
-            'slideshows' => "",
-            'videos' => "",
-            'faqs' => ""
-        );
-        $members_submenu = array(
-            "all-members" => "",
-            "add-members" => "",
-            "change-rolls" => ""
-        );
-        if(strpos(url()->current(), '/admin/dashboard')) {
-            $dashboard = 'active';
-        } else if(strpos(url()->current(), '/admin/projects')) {
-            $projects = 'active';
-            if(strpos(url()->current(), '/all')) {
-                $projects_submenu['all-projects'] = 'active';
-            } 
-            if(strpos(url()->current(), '/create')) {
-                $projects_submenu['create-projects'] = 'active';
-            }  
-            if(strpos(url()->current(), '/images')) {
-                $projects_submenu['featured-images'] = 'active';
-            }
-            if(strpos(url()->current(), '/slideshows')) {
-                $projects_submenu['slideshows'] = 'active';
-            }
-            if(strpos(url()->current(), '/videos')) {
-                $projects_submenu['videos'] = 'active';
-            }
-            if(strpos(url()->current(), '/faqs')) {
-                $projects_submenu['faqs'] = 'active';
-            }
-        } else if(strpos(url()->current(), '/admin/members')) {
-            $members = 'active';
-            if(strpos(url()->current(), '/all')) {
-                $members_submenu['all-members'] = 'active';
-            }  
-            if(strpos(url()->current(), '/add')) {
-                $members_submenu['add-members'] = 'active';
-            }
-            if(strpos(url()->current(), '/rolls')) {
-                $members_submenu['change-rolls'] = 'active';
-            }
-        } else if(strpos(url()->current(), '/admin/info')) {
-            $website_info = "active";
-        }
-        
-          
-    ?> --}}
     <div id="app">
         <div id="sidebar" class="active">
             <div class="sidebar-wrapper active">
