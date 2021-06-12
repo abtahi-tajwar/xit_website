@@ -24,5 +24,6 @@ Route::view('/admin/projects/create', 'admin.createproject')->name('admin-create
 Route::post('/admin/projects/create', [SingleProject::class, 'addProject'])->name('admin-create-project');
 Route::get('/admin/projects/all', [AllProjects::class, 'init'])->name('admin-all-projects');
 Route::post('/admin/projects/edit', [EditProject::class, 'editProject'])->name('admin-edit-project');
+Route::post('/admin/projects/edit/active_status', [EditProject::class, 'editActiveStatus'])->name('admin-edit-active-status');
 Route::get('/admin/projects/edit/{id}', [EditProject::class, 'init'])->name('admin-editproject-view');
 Route::get('/admin/project/delete/{id}', [AllProjects::class, 'deleteProject'])->name('admin-delete-project');

@@ -35,15 +35,16 @@ echo Sidebar::init(); ?>
                         <td><a href="{{ route('admin-editproject-view', ['id' => $project['id']]) }}" class="btn btn-warning">Edit</a></td>
                         <td><a href="{{ route('admin-delete-project', ['id' => $project['id']]) }}" class="btn btn-danger">Delete</a></td>
                         <td>
-                            @if($project['active'] === 1)
-                            <a class="btn btn-success">Active</a>
-                            @else
-                            <a class="btn btn-secondary">Active</a>
-                            @endif
+                            <form action="" id="activateFrom_{{$project['id']}}">
+                                @csrf
+                                <label class="form-switch">
+                                    <input type="checkbox" id="activate_{{$project['id']}}" class="activate_project" {{ $project['active']==1 ? 'checked' : '' }}>
+                                    <i></i>
+                                </label>
+                            </form>
                         </td>
                     </tr>
                     @endforeach
-                    
                 </tbody>
             </table>
 

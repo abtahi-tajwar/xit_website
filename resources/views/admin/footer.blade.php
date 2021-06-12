@@ -17,6 +17,7 @@
     <script src="{{ asset('/vendor/simple-datatables/simple-datatables.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
     <script src="{{ asset('js/admin/sidebar.js') }}"></script>
+    <script src="{{ asset('js/root-info.js') }}"></script>
     
     
     

@@ -38,4 +38,14 @@ class EditProject extends Controller
 
         return redirect(route('admin-all-projects'));
     }
+    function editActiveStatus(Request $request) {
+        $req = json_decode($request->getContent(), true);
+        $project = Project::find($req['id']);
+        $project->active = $req['checked'];
+        $project->update();
+        //$req = json_decode($request->getContent(), true);
+        // $project = Project::find($req['id']);
+        // $project->active = $req['checked'];
+        return $req;
+    }
 }

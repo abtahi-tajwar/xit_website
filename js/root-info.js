@@ -1,0 +1,1 @@
+const base_url = "http://localhost/xit_website"

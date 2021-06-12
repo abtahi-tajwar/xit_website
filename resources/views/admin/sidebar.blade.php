@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ asset('/vendor/bootstrap-icons/bootstrap-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin/sidebar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin/layout.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/form-switch.css') }}">
     <title>XIT Website | Admin Panel</title>
 </head>
 <body>
