@@ -5,6 +5,8 @@ use App\Http\Controllers\Homepage;
 use App\Http\Controllers\SingleProject;
 use App\Http\Controllers\AllProjects;
 use App\Http\Controllers\EditProject;
+use App\Http\Controllers\SlideshowController;
+use App\Slideshow;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,10 +22,22 @@ use App\Http\Controllers\EditProject;
 Route::get('/', [Homepage::class, 'initHomePage']);
 Route::get('/single-project/{id}', [SingleProject::class, 'initSinglePage']);
 Route::view('/admin/dashboard', 'admin.dashboard')->name('admin-dashboard');
+
+//Projects Route
+// - Create project
 Route::view('/admin/projects/create', 'admin.createproject')->name('admin-create-project');
 Route::post('/admin/projects/create', [SingleProject::class, 'addProject'])->name('admin-create-project');
+// - All Projects
 Route::get('/admin/projects/all', [AllProjects::class, 'init'])->name('admin-all-projects');
+// - Admin project search
+Route::post('/admin/projects/search', [AllProjects::class, 'asyncSearchProject'])->name('admin-project-search');
+// - Edit Project
 Route::post('/admin/projects/edit', [EditProject::class, 'editProject'])->name('admin-edit-project');
 Route::post('/admin/projects/edit/active_status', [EditProject::class, 'editActiveStatus'])->name('admin-edit-active-status');
 Route::get('/admin/projects/edit/{id}', [EditProject::class, 'init'])->name('admin-editproject-view');
+// - Delete Project
 Route::get('/admin/project/delete/{id}', [AllProjects::class, 'deleteProject'])->name('admin-delete-project');
+// - Slideshow
+Route::get('/admin/projects/slideshows/{id}', [SlideshowController::class, 'init'])->name('admin-project-slideshow');
+Route::post('/admin/projects/slideshows/upload', [SlideshowController::class, 'uploadSlideshowImage'])->name('admin-project-slideshow-upload');
+

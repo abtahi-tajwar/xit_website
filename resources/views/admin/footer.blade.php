@@ -18,13 +18,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
     <script src="{{ asset('js/admin/sidebar.js') }}"></script>
     <script src="{{ asset('js/root-info.js') }}"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>    
     
     
     @if($projects_submenu['create-projects'] === 'active' || $projects_submenu['edit-project'] === 'active')
     <script src="{{ asset('js/admin/create-project.js') }}"></script>
     @elseif($projects_submenu['all-projects'] === 'active')
-    <script src="{{ asset('js/admin/all-projects.js') }}"></script>    
+    <script src="{{ asset('js/admin/all-projects.js') }}"></script> 
+    @elseif($projects_submenu['slideshows'] === 'active')   
+    <script src="{{ asset('js/admin/search-list.js') }}"></script> 
     @endif
 
 </body>

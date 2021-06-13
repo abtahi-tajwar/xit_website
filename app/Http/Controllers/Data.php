@@ -52,5 +52,19 @@ class Data extends Controller
                     ->get();
         return $images;
     }
+    static function searchData($table_name, $col, $value)
+    {
+        $data = DB::select("SELECT * FROM `".$table_name."` WHERE (".$col." LIKE '".$value."%') LIMIT 5");
+        return $data;
+    }
+    static function getSlideshowImageByOrder($project_id)
+    {
+        $images = DB::table('project_slideshow')
+                    ->where('project_id', $project_id)
+                    ->orderBy('img_order', 'asc')
+                    ->get();
+
+        return $images;
+    }
 }
 

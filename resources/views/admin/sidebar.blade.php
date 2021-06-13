@@ -10,12 +10,17 @@
     <link href="{{ asset('img/favicon-admin.png') }}" rel="icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    
     <link rel="stylesheet" href="{{ asset('/vendor/iconly/bold.css') }}">
     <link rel="stylesheet" href="{{ asset('/vendor/perfect-scrollbar/perfect-scrollbar.css') }}">
     <link rel="stylesheet" href="{{ asset('/vendor/bootstrap-icons/bootstrap-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin/sidebar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin/layout.css') }}">
     <link rel="stylesheet" href="{{ asset('css/admin/form-switch.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/lightbox-gallery.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin/search-list.css') }}">
+
     <title>XIT Website | Admin Panel</title>
 </head>
 <body>
@@ -60,7 +65,7 @@
                                     <a href="component-breadcrumb.html">Featured Images</a>
                                 </li>
                                 <li class="submenu-item {{ $projects_submenu['slideshows'] }}">
-                                    <a href="component-button.html">Slideshows</a>
+                                    <a href="{{ route('admin-project-slideshow', ['id'=> 0]) }}">Slideshows</a>
                                 </li>
                                 <li class="submenu-item {{ $projects_submenu['videos'] }}">
                                     <a href="component-card.html">Videos</a>

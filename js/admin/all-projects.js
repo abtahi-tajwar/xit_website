@@ -3,7 +3,6 @@ let dataTable = new simpleDatatables.DataTable(table1);
 
 document.querySelectorAll('.activate_project').forEach(item => {
     item.addEventListener('click', (e) => {
-
         console.log(base_url+'/admin/projects/edit/active_status')
         let project_id = e.target.id.split("_")[1];
         console.log(project_id);
