@@ -8,7 +8,7 @@ document.getElementById('searchProjects').addEventListener('keyup', e => {
     }).then(data => {
       console.log(data)
       data.forEach(item => {
-        list_output += `<li><a href="${base_url}/admin/projects/slideshows/${item.id}">${item.title}</a></li>`
+        list_output += `<li><a href="${search_list_req_url}/${item.id}">${item.title}</a></li>`
       })
       document.getElementById('myUL').innerHTML = list_output;
     })

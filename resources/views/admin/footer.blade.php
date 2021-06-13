@@ -24,8 +24,14 @@
     @if($projects_submenu['create-projects'] === 'active' || $projects_submenu['edit-project'] === 'active')
     <script src="{{ asset('js/admin/create-project.js') }}"></script>
     @elseif($projects_submenu['all-projects'] === 'active')
-    <script src="{{ asset('js/admin/all-projects.js') }}"></script> 
-    @elseif($projects_submenu['slideshows'] === 'active')   
+    <script src="{{ asset('js/admin/all-projects.js') }}"></script>
+    @elseif($members_submenu['all-members'] === 'active')
+    <script src="{{ asset('js/admin/all-members.js') }}"></script> 
+    @elseif($projects_submenu['slideshows'] === 'active')  
+    <script src="{{ asset('js/admin/slideshows.js') }}"></script>  
+    <script src="{{ asset('js/admin/search-list.js') }}"></script> 
+    @elseif($projects_submenu['faqs'] === 'active')  
+    <script src="{{ asset('js/admin/faq.js') }}"></script>  
     <script src="{{ asset('js/admin/search-list.js') }}"></script> 
     @endif
 

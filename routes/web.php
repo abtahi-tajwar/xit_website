@@ -1,12 +1,14 @@
 <?php
 
+use App\Http\Controllers\AllMembersController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Homepage;
 use App\Http\Controllers\SingleProject;
 use App\Http\Controllers\AllProjects;
+use App\Http\Controllers\EditMemberController;
 use App\Http\Controllers\EditProject;
 use App\Http\Controllers\SlideshowController;
-use App\Slideshow;
+use App\Http\Controllers\FAQController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,4 +42,11 @@ Route::get('/admin/project/delete/{id}', [AllProjects::class, 'deleteProject'])-
 // - Slideshow
 Route::get('/admin/projects/slideshows/{id}', [SlideshowController::class, 'init'])->name('admin-project-slideshow');
 Route::post('/admin/projects/slideshows/upload', [SlideshowController::class, 'uploadSlideshowImage'])->name('admin-project-slideshow-upload');
+// - Faq
+Route::get('/admin/projects/faqs/{id}', [FAQController::class, 'init'])->name('admin-project-faqs');
+Route::post('/admin/projects/faqs/upload', [FAQController::class, 'addFAQ'])->name('admin-project-faqs-upload');
 
+//Members route
+// - All Members
+Route::get('/admin/members/all', [AllMembersController::class, 'init'])->name('admin-all-members');
+Route::post('/admin/members/edit/active_status', [EditMemberController::class, 'editActiveStatus'])->name('admin-edit-member-active_status');

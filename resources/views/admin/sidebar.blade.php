@@ -71,7 +71,7 @@
                                     <a href="component-card.html">Videos</a>
                                 </li>
                                 <li class="submenu-item {{ $projects_submenu['faqs'] }}">
-                                    <a href="component-carousel.html">FAQs</a>
+                                    <a href="{{ route('admin-project-faqs', ['id' => 0]) }}">FAQs</a>
                                 </li>
                             </ul>
                         </li>
@@ -83,7 +83,7 @@
                             </a>
                             <ul class="submenu {{ $members }}">
                                 <li class="submenu-item {{ $members_submenu['all-members'] }}">
-                                    <a href="extra-component-avatar.html">All Members</a>
+                                    <a href="{{ route('admin-all-members') }}">All Members</a>
                                 </li>
                                 <li class="submenu-item {{ $members_submenu['add-members'] }}">
                                     <a href="extra-component-sweetalert.html">Add Member</a>

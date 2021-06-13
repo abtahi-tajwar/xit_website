@@ -8,4 +8,5 @@ class FAQ extends Model
 {
     //
     public $table = 'project_faq';
+    public $timestamps = false;
 }
