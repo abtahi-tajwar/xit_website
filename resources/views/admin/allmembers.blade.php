@@ -35,8 +35,8 @@ echo Sidebar::init(); ?>
                         {{-- <td><a href="{{ route('admin-editmember-view', ['id' => $member['id']]) }}" class="btn btn-warning">Edit</a></td>
                         <td><a href="{{ route('admin-delete-member', ['id' => $member['id']]) }}" class="btn btn-danger">Delete</a></td> --}}
 
-                        <td><a href="" class="btn btn-warning">Edit</a></td>
-                        <td><a href="" class="btn btn-danger">Delete</a></td>
+                        <td><a href="{{ route('admin-edit-member-get', ['id' => $member['id']]) }}" class="btn btn-warning">Edit</a></td>
+                        <td><a href="{{ route('admin-delete-member', ['id' => $member->id]) }}" class="btn btn-danger">Delete</a></td>
                         <td>
                             <form action="" id="activateFrom_{{$member['id']}}">
                                 @csrf

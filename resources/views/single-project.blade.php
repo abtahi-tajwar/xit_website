@@ -16,6 +16,7 @@
     <div class="intro">
         <h2>School Management System</h2>
         <div class="intro__body">
+            @if($images !== [])
             <div class="intro__project-slideshow">
                 {{-- <img class="owl_img" src="{{ asset('images/portfolios/1.png') }}" alt=""> --}}
                 <div class="owl-carousel owl-theme">
@@ -24,6 +25,8 @@
                     @endforeach
                 </div>
             </div>
+            @endif
+            @isset($description)
             <div class="intro__project-desc">
                 <?php print_r($description[0]['description']) ?>
                 <ul>
@@ -35,12 +38,16 @@
                     @endforeach
                 </ul>
             </div>
+            @endisset
         </div>
     </div>
+    @if($img !== [])
     <div class="tutorial">
         <h2>How to use</h2>
         <img src="{{ asset('images/portfolios/'.$img[0]['image']) }}" alt="">
     </div>
+    @endif
+    @if($faq !== [])
     <div class="faq">
         <h2>FAQ</h2>
         <div class="faq__body">
@@ -67,6 +74,7 @@
             </div>            
         </div>
     </div>
+    @endif
 </div>
 {{-- <div class="owl-carousel single-project-featured">
     <div> Your Content </div>

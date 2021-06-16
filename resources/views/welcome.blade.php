@@ -815,7 +815,10 @@
               <div class="single-icon">
                 <i class="fa fa-mobile"></i>
                 <p>
-                  Call:   {{$data->contact->phone[0]}},<br> {{$data->contact->phone[0]}},<br> {{$data->contact->phone[0]}}<br>
+                  Call:  
+                  @foreach ($data->contact->phone as $phone)
+                  {{$phone}},<br> 
+                  @endforeach                   
                   <span>{{$data->contact->time}}</span>
                 </p>
               </div>

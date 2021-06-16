@@ -5,10 +5,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Homepage;
 use App\Http\Controllers\SingleProject;
 use App\Http\Controllers\AllProjects;
+use App\Http\Controllers\CreateMemberController;
 use App\Http\Controllers\EditMemberController;
 use App\Http\Controllers\EditProject;
 use App\Http\Controllers\SlideshowController;
 use App\Http\Controllers\FAQController;
+use App\Http\Controllers\WebsiteInfoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,3 +52,15 @@ Route::post('/admin/projects/faqs/upload', [FAQController::class, 'addFAQ'])->na
 // - All Members
 Route::get('/admin/members/all', [AllMembersController::class, 'init'])->name('admin-all-members');
 Route::post('/admin/members/edit/active_status', [EditMemberController::class, 'editActiveStatus'])->name('admin-edit-member-active_status');
+// - Create Members
+Route::get('/admin/members/create', [CreateMemberController::class, 'init'])->name('admin-create-member');
+Route::post('/admin/members/create', [CreateMemberController::class, 'addMember'])->name('admin-creat-member');
+// - Edit Members
+Route::get('/admin/members/edit/{id}', [EditMemberController::class, 'init'])->name('admin-edit-member-get');
+Route::post('/admin/members/edit', [EditMemberController::class, 'editMember'])->name('admin-edit-member');
+// - Delete Member
+Route::get('/admin/members/delete/{id}', [AllMembersController::class, 'deleteMember'])->name('admin-delete-member');
+
+//Website Info Route
+Route::get('/admin/website-info', [WebsiteInfoController::class, 'init'])->name('admin-website-info');
+Route::post('/admin/website-info/update', [WebsiteInfoController::class, 'updateWebsiteInfo'])->name('admin-website-info-update');

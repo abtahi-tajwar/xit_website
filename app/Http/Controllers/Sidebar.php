@@ -64,7 +64,7 @@ class Sidebar extends Controller
             if(strpos(url()->current(), '/rolls')) {
                 Sidebar::$members_submenu['change-rolls'] = 'active';
             }
-        } else if(strpos(url()->current(), '/admin/info')) {
+        } else if(strpos(url()->current(), '/admin/website-info')) {
             Sidebar::$website_info = "active";
         }
         return view('admin.sidebar', [

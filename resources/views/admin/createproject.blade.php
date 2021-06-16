@@ -36,11 +36,11 @@ echo Sidebar::init(); ?>
                     </div>
                     <div class="input-group mb-3">
                         <button type="button" class="btn btn-success" id="add-project-feature">Add More Items</button>
-                    </div>
-                    
+                    </div>                    
                     <div class="mb-3">
                         <label for="project-description" class="form-label">Fill up the input box to add more items</label>
                     </div>
+                    
                     <div class="row">
                         <div class="col-sm">
                             <select class="form-select" aria-label="Default select example" name="project-category">

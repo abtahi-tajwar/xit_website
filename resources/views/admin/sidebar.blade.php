@@ -61,9 +61,6 @@
                                 <li class="submenu-item {{ $projects_submenu['create-projects'] }}">
                                     <a href="{{ route('admin-create-project') }}">Create Projects</a>
                                 </li>
-                                <li class="submenu-item {{ $projects_submenu['featured-images'] }}">
-                                    <a href="component-breadcrumb.html">Featured Images</a>
-                                </li>
                                 <li class="submenu-item {{ $projects_submenu['slideshows'] }}">
                                     <a href="{{ route('admin-project-slideshow', ['id'=> 0]) }}">Slideshows</a>
                                 </li>
@@ -86,16 +83,13 @@
                                     <a href="{{ route('admin-all-members') }}">All Members</a>
                                 </li>
                                 <li class="submenu-item {{ $members_submenu['add-members'] }}">
-                                    <a href="extra-component-sweetalert.html">Add Member</a>
-                                </li>
-                                <li class="submenu-item {{ $members_submenu['change-rolls'] }}">
-                                    <a href="extra-component-toastify.html">Change Roll</a>
+                                    <a href="{{ route('admin-create-member') }}">Add Member</a>
                                 </li>
                             </ul>
                         </li>
 
                         <li class="sidebar-item {{ $website_info }}">
-                            <a href="#" class='sidebar-link'>
+                            <a href="{{ route('admin-website-info') }}" class='sidebar-link'>
                                 <i class="bi bi-grid-1x2-fill"></i>
                                 <span>Website info</span>
                             </a>

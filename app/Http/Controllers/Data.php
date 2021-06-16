@@ -6,6 +6,7 @@ use App\Project;
 use App\FAQ;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 
@@ -14,9 +15,23 @@ class Data extends Controller
     //    
     static function fetchJSONData($filename)
     {
-        $path = storage_path() . "/json/info.json";
+        $path = storage_path() . "/json/" . $filename;
         $json = json_decode(file_get_contents($path)); 
         return $json;
+    }
+    static function writeJSON($data, $filename)
+    {
+        $path = storage_path() . "/json/" . $filename;
+        file_put_contents($path, $data); 
+    }
+    static function getWebsiteInfo()
+    {
+        $data = Data::fetchJSONData('info.json');
+        return $data;
+    }
+    static function updateWebsiteInfo($data)
+    {
+        Data::writeJSON(json_encode($data), 'info.json');
     }
     static function fetchMembers()
     {

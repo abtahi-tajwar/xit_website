@@ -33,6 +33,8 @@
     @elseif($projects_submenu['faqs'] === 'active')  
     <script src="{{ asset('js/admin/faq.js') }}"></script>  
     <script src="{{ asset('js/admin/search-list.js') }}"></script> 
+    @elseif($website_info === 'active')
+    <script src="{{ asset('js/admin/update-website-info.js') }}"></script> 
     @endif
 
 </body>
