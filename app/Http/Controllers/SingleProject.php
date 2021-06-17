@@ -19,6 +19,7 @@ class SingleProject extends Controller
         $description = Data::fetchProjectDesc($id);
         $img = Data::fetchProjectImage($id);
         $images = Data::fetchProjectSlideshow($id);
+        //dd(json_decode($images, 1) === []);
         return view('single-project', [
             'id' => $id,
             'data' => $data, 

@@ -89,6 +89,14 @@
   position: relative;
 }
 
+.single__container .faq .questions .question img {
+  pointer-events: none;
+}
+
+.single__container .faq .questions .question h3 {
+  pointer-events: none;
+}
+
 .single__container .faq .questions .question:hover {
   background-color: var(--base-color);
 }

@@ -61,6 +61,12 @@
                 padding: 10px;
 
                 position: relative;
+                img {
+                    pointer-events: none;
+                }
+                h3 {
+                    pointer-events: none;
+                }
                 &:hover {
                     background-color: var(--base-color);
                 }

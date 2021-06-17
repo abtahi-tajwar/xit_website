@@ -41,6 +41,10 @@ class Data extends Controller
     {
         return Project::all();
     }
+    static function fetchActiveProjects()
+    {
+        return Project::where("active", 1)->get();
+    }
     static function fetchFaq($project_id)
     {
         return FAQ::where('project_id', $project_id)

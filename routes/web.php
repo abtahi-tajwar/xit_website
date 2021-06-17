@@ -23,7 +23,7 @@ use App\Http\Controllers\WebsiteInfoController;
 |
 */
 
-Route::get('/', [Homepage::class, 'initHomePage']);
+Route::get('/', [Homepage::class, 'initHomePage'])->name('home');
 Route::get('/single-project/{id}', [SingleProject::class, 'initSinglePage']);
 Route::view('/admin/dashboard', 'admin.dashboard')->name('admin-dashboard');
 

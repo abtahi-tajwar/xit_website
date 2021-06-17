@@ -16,7 +16,8 @@
     <div class="intro">
         <h2>School Management System</h2>
         <div class="intro__body">
-            @if($images !== [])
+            {{-- {{ dd(empty($images)) }} --}}
+            @if(count($images) > 0)
             <div class="intro__project-slideshow">
                 {{-- <img class="owl_img" src="{{ asset('images/portfolios/1.png') }}" alt=""> --}}
                 <div class="owl-carousel owl-theme">

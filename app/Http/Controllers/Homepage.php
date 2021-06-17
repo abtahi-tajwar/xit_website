@@ -13,7 +13,7 @@ class Homepage extends Controller
         $path = storage_path() . "\json\info.json";        
         $data = Data::fetchJSONData('info.json');
         $members = Data::fetchMembers();
-        $projects = Data::fetchProjects();
+        $projects = Data::fetchActiveProjects();
         return view('welcome', ['data' => $data, 'path' => $path, 'members' => $members, 'projects' => $projects]);
     }
 }

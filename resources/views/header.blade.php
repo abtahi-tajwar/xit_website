@@ -48,7 +48,22 @@
     License: https://bootstrapmade.com/license/
   ======================================================= -->
 </head>
+<?php
+function endWith($str, $lastString) {
+      $count = strlen($lastString);
+      if ($count == 0) {
+         return true;
+      }
+      return (substr($str, -$count) === $lastString);
+  }
+$homepageURL = ''; 
+if(!endWith(url()->current(), "xit_website") ) {
+  $homepageURL = route('home');
+}  
+?>    
 
+
+  
 <body data-spy="scroll" data-target="#navbar-example">
   <div id="preloader"></div>
   <header>
@@ -79,25 +94,25 @@
               <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
                 <ul class="nav navbar-nav navbar-right">
                   <li class="active">
-                    <a class="page-scroll" href="#home">Home</a>
+                    <a class="page-scroll" href="{{$homepageURL}}#home">Home</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#about">About</a>
+                    <a class="page-scroll" href="{{$homepageURL}}#about">About</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#services">Services</a>
+                    <a class="page-scroll" href="{{$homepageURL}}#services">Services</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#team">Team</a>
+                    <a class="page-scroll" href="{{$homepageURL}}#team">Team</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#portfolio"><b>Projects</b></a>
+                    <a class="page-scroll" href="{{$homepageURL}}#portfolio"><b>Projects</b></a>
                   </li>
                   <!--<li>
                     <a class="page-scroll" href="#blog">Blog</a>
                   </li>-->
                   <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
+                    <a class="page-scroll" href="{{$homepageURL}}#contact">Contact</a>
                   </li>
                 </ul>
               </div>
