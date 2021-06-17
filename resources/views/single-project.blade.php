@@ -1,23 +1,11 @@
 @include('header')
-{{-- <div class="single__container">
-    <div class="intro">
-        <div class="project-slideshow">
-            <div class="owl-carousel owl-theme featured-carousel">
-                <div class="item"><img class="owl_img" src="{{ asset('images/portfolios/1.png') }}" alt=""></div>
-                <div class="item"><img class="owl_img" src="{{ asset('images/portfolios/2.png') }}" alt=""></div>
-                <div class="item"><img class="owl_img" src="{{ asset('images/portfolios/3.png') }}" alt=""></div>
-                <div class="item"><img class="owl_img" src="{{ asset('images/portfolios/4.png') }}" alt=""></div>
-            </div>
-        </div>
-        <div class="intro__desc"></div>
-    </div>    
-</div> --}}
-<div class="single__container">    
+
+<div class="single__container">
     <div class="intro">
         <h2>School Management System</h2>
         <div class="intro__body">
-            {{-- {{ dd(empty($images)) }} --}}
-            @if(count($images) > 0)
+
+            @if(sizeof($images))
             <div class="intro__project-slideshow">
                 {{-- <img class="owl_img" src="{{ asset('images/portfolios/1.png') }}" alt=""> --}}
                 <div class="owl-carousel owl-theme">
@@ -27,19 +15,20 @@
                 </div>
             </div>
             @endif
-            @isset($description)
+            @if(sizeof($description))
+
             <div class="intro__project-desc">
                 <?php print_r($description[0]['description']) ?>
                 <ul>
-                    <?php 
-                        $feature_list = explode(";;;", $description[0]['feature_list']);    
+                    <?php
+                        $feature_list = explode(";;;", $description[0]['feature_list']);
                     ?>
                     @foreach ($feature_list as $feature)
                     <li><i class="fa fa-check"></i> {{ $feature }}</li>
                     @endforeach
                 </ul>
             </div>
-            @endisset
+            @endif
         </div>
     </div>
     @if($img !== [])
@@ -52,7 +41,7 @@
     <div class="faq">
         <h2>FAQ</h2>
         <div class="faq__body">
-            
+
             <div class="questions">
                 @foreach ($faq as $question)
                 <div class="question" id="{{ $question['id'] }}">
@@ -60,7 +49,7 @@
                     <img src="{{ asset('images/ui/right-arrow.svg') }}" height="16" width="16" alt="">
                 </div>
                 @endforeach
-            </div>           
+            </div>
             <div class="answer">
                 <div class="answer_container">
                     <h3 class="question_txt"></h3>
@@ -72,7 +61,7 @@
                 <p id="at{{$question['id']}}">{{ $question['answer'] }}</p>
                 </div>
             @endforeach
-            </div>            
+            </div>
         </div>
     </div>
     @endif

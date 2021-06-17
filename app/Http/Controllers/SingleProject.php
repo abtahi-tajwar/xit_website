@@ -19,10 +19,11 @@ class SingleProject extends Controller
         $description = Data::fetchProjectDesc($id);
         $img = Data::fetchProjectImage($id);
         $images = Data::fetchProjectSlideshow($id);
+        file_put_contents('test.txt',$images);
         //dd(json_decode($images, 1) === []);
         return view('single-project', [
             'id' => $id,
-            'data' => $data, 
+            'data' => $data,
             'faq' => $faq,
             'description' => json_decode($description, 1),
             'img' => json_decode($img, 1),
@@ -35,7 +36,7 @@ class SingleProject extends Controller
         $date = new DateTime();
         $featured_image_name = $date->getTimestamp().'-'.$req->file('featured_image')->getClientOriginalName();
         $req->file('featured_image')->move(public_path('../images/portfolios'), $featured_image_name);
-        
+
         $project_features_string = "";
         $project_features_string = implode(",", $project_features);
 
