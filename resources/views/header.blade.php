@@ -85,7 +85,8 @@ if(!endWith(url()->current(), "xit_website") ) {
 									</button>
                 <!-- Brand -->
                 <a class="navbar-brand page-scroll sticky-logo" href="index-2.html">
-                  <h1><span>XiT</span> Bangladesh</h1>
+                  {{-- <h1><span>XiT</span> Bangladesh</h1> --}}
+                  <img src="{{ asset('images').'/logof.png' }}" height="50px" alt="">
                   <!-- Uncomment below if you prefer to use an image logo -->
                   <!-- <img src="img/logo.png" alt="" title=""> -->
 								</a>
