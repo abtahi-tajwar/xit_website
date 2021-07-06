@@ -78,7 +78,8 @@ img {
   height: auto;
 }
 .sticky-logo > img {
-  height: 50px;
+  height: 100px;
+  margin-top:-22px;
 }
 .fix {
   overflow: hidden;
@@ -382,7 +383,7 @@ div#preloader {
 
 .header-area.stick {
   background-color: rgba(0, 0, 0, 1);
-  height: 70px;
+  height: 86px;
   position: fixed;
   top: 0;
   width: 100%;

@@ -56,14 +56,14 @@ function endWith($str, $lastString) {
       }
       return (substr($str, -$count) === $lastString);
   }
-$homepageURL = ''; 
+$homepageURL = '';
 if(!endWith(url()->current(), "xit_website") ) {
   $homepageURL = route('home');
-}  
-?>    
+}
+?>
 
 
-  
+
 <body data-spy="scroll" data-target="#navbar-example">
   <div id="preloader"></div>
   <header>
@@ -92,7 +92,7 @@ if(!endWith(url()->current(), "xit_website") ) {
 								</a>
               </div>
               <!-- Collect the nav links, forms, and other content for toggling -->
-              <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
+              <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example" style="padding-top:15px">
                 <ul class="nav navbar-nav navbar-right">
                   <li class="active">
                     <a class="page-scroll" href="{{$homepageURL}}#home">Home</a>
