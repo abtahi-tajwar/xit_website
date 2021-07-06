@@ -43,6 +43,9 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+        'admin-auth' => [
+            \App\Http\Middleware\AdminAuthentication::class,
+        ]
     ];
 
     /**
